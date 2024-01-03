@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SveltoTesting", "SveltoTesting\SveltoTesting.csproj", "{58D41E42-BDCD-4861-8F88-395B2F82F015}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Svelto.Common", "Svelto.ECS\com.sebaslab.svelto.common\Svelto.Common.csproj", "{9BD75C8F-6FC3-4C57-8751-96BF21924431}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Svelto.ECS", "Svelto.ECS\com.sebaslab.svelto.ecs\Svelto.ECS.csproj", "{C1D1EC52-A69C-4412-AFD1-178517A6D32B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		SlowSubmissionDebug|Any CPU = SlowSubmissionDebug|Any CPU
+		SlowSubmissionRelease|Any CPU = SlowSubmissionRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{58D41E42-BDCD-4861-8F88-395B2F82F015}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58D41E42-BDCD-4861-8F88-395B2F82F015}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58D41E42-BDCD-4861-8F88-395B2F82F015}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58D41E42-BDCD-4861-8F88-395B2F82F015}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58D41E42-BDCD-4861-8F88-395B2F82F015}.SlowSubmissionDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58D41E42-BDCD-4861-8F88-395B2F82F015}.SlowSubmissionDebug|Any CPU.Build.0 = Debug|Any CPU
+		{58D41E42-BDCD-4861-8F88-395B2F82F015}.SlowSubmissionRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{58D41E42-BDCD-4861-8F88-395B2F82F015}.SlowSubmissionRelease|Any CPU.Build.0 = Release|Any CPU
+		{9BD75C8F-6FC3-4C57-8751-96BF21924431}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BD75C8F-6FC3-4C57-8751-96BF21924431}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BD75C8F-6FC3-4C57-8751-96BF21924431}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BD75C8F-6FC3-4C57-8751-96BF21924431}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BD75C8F-6FC3-4C57-8751-96BF21924431}.SlowSubmissionDebug|Any CPU.ActiveCfg = SlowSubmissionDebug|Any CPU
+		{9BD75C8F-6FC3-4C57-8751-96BF21924431}.SlowSubmissionDebug|Any CPU.Build.0 = SlowSubmissionDebug|Any CPU
+		{9BD75C8F-6FC3-4C57-8751-96BF21924431}.SlowSubmissionRelease|Any CPU.ActiveCfg = SlowSubmissionRelease|Any CPU
+		{9BD75C8F-6FC3-4C57-8751-96BF21924431}.SlowSubmissionRelease|Any CPU.Build.0 = SlowSubmissionRelease|Any CPU
+		{C1D1EC52-A69C-4412-AFD1-178517A6D32B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1D1EC52-A69C-4412-AFD1-178517A6D32B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1D1EC52-A69C-4412-AFD1-178517A6D32B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1D1EC52-A69C-4412-AFD1-178517A6D32B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1D1EC52-A69C-4412-AFD1-178517A6D32B}.SlowSubmissionDebug|Any CPU.ActiveCfg = SlowSubmissionDebug|Any CPU
+		{C1D1EC52-A69C-4412-AFD1-178517A6D32B}.SlowSubmissionDebug|Any CPU.Build.0 = SlowSubmissionDebug|Any CPU
+		{C1D1EC52-A69C-4412-AFD1-178517A6D32B}.SlowSubmissionRelease|Any CPU.ActiveCfg = SlowSubmissionRelease|Any CPU
+		{C1D1EC52-A69C-4412-AFD1-178517A6D32B}.SlowSubmissionRelease|Any CPU.Build.0 = SlowSubmissionRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {97ADABB9-6466-4E67-9BC1-D4AA46ED9806}
+	EndGlobalSection
+EndGlobal
