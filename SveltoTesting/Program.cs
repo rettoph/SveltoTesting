@@ -89,7 +89,10 @@ public class NodeEngine : IQueryingEntitiesEngine, IReactOnAddEx<Node>
         }
 
         // Attempt to access the original treesFilter
-        var count = treesFilter.ComputeFinalCount();
+        var count = treesFilter.ComputeFinalCount(); // Throws System.AccessViolationException:
+                                                     // 'Attempted to read or write protected memory.
+                                                     // This is often an indication that other memory is corrupt.'
+
         treesFilter.Clear();
     }
 
