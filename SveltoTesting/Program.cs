@@ -1,17 +1,13 @@
 ﻿using Svelto.ECS;
 using Svelto.ECS.Schedulers;
 
-// Serialize
 var simpleEntitiesSubmissionScheduler = new SimpleEntitiesSubmissionScheduler();
 var enginesRoot = new EnginesRoot(simpleEntitiesSubmissionScheduler);
-
-
-
 
 var factory = enginesRoot.GenerateEntityFactory();
 var functions = enginesRoot.GenerateEntityFunctions();
 
-var engine = new NodeEngine(functions, factory, simpleEntitiesSubmissionScheduler);
+var engine = new NodeEngine(functions, factory);
 enginesRoot.AddEngine(engine);
 
 for (int i = 0; i < 100; i++)
@@ -28,8 +24,6 @@ for (int i = 0; i < 100; i++)
     engine.DeleteAllEntities();
 }
 
-
-
 public struct Node : IEntityComponent
 {
     private static int CurrentFilterId;
@@ -40,7 +34,6 @@ public struct Node : IEntityComponent
 
     public readonly EGID? Parent;
     public readonly int ChildrenFilterId;
-    public readonly int Children;
 
     public Node(EGID? parent)
     {
@@ -55,8 +48,6 @@ class NodeDescriptor : IEntityDescriptor
     {
         new ComponentBuilder<Node>()
     };
-
-
 }
 
 public class NodeEngine : IQueryingEntitiesEngine, IReactOnAddEx<Node>
@@ -65,22 +56,16 @@ public class NodeEngine : IQueryingEntitiesEngine, IReactOnAddEx<Node>
     private uint _currentEntityId;
     private IEntityFunctions _functions;
     private IEntityFactory _factory;
-    private SimpleEntitiesSubmissionScheduler _submissionScheduler;
 
     public EntitiesDB entitiesDB { get; set; } = null!;
 
-    public NodeEngine(IEntityFunctions functions, IEntityFactory factory, SimpleEntitiesSubmissionScheduler submissionScheduler)
+    public NodeEngine(IEntityFunctions functions, IEntityFactory factory)
     {
         _functions = functions;
         _factory = factory;
-        _submissionScheduler = submissionScheduler;
     }
 
-    public void Ready()
-    {
-
-
-    }
+    public void Ready() { }
 
     public void DeleteAllEntities()
     {
@@ -155,6 +140,12 @@ public class NodeEngine : IQueryingEntitiesEngine, IReactOnAddEx<Node>
         return head;
     }
 
+    /// <summary>
+    /// Add nodes either to the tree filter or the parent node's children filter
+    /// </summary>
+    /// <param name="rangeOfEntities"></param>
+    /// <param name="entities"></param>
+    /// <param name="groupID"></param>
     public void Add((uint start, uint end) rangeOfEntities, in EntityCollection<Node> entities, ExclusiveGroupStruct groupID)
     {
         var (nodes, ids, _) = entities;
